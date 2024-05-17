@@ -23,10 +23,16 @@ const SearchExercise = () => {
   };
 
   return (
-    <div>
-      {data.map((data) => (
-        <ExerciseCard key={data.id} exercise={data} onClick={onExerciseClick} />
-      ))}
+    <div className="w-screen ">
+      <div className="w-full flex flex-wrap justify-center gap-5 items-center my-5">
+        {data.map((data) => (
+          <ExerciseCard
+            key={data.id}
+            exercise={data}
+            onClick={onExerciseClick}
+          />
+        ))}
+      </div>
     </div>
   );
 };
